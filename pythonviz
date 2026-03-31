@@ -1,9 +1,0 @@
-import pandas as pd
-
-# Load dataset
-df = pd.read_csv("customer_dataset_no_membership.csv")
-
-# Count total missing values
-missing_count = df.isnull().sum().sum()
-
-print("Total missing values:", missing_count)
