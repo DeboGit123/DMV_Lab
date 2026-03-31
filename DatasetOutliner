@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_excel(r"D:\Devesh_DMV_LAB\customer_dataset_no_membership.xlsx")
+df = pd.read_csv(r"D:\Debopriyo_DMV\customer_dataset_no_membership.csv")
 
 missing_count = df.isnull().sum().sum()
 print("Total missing values:", missing_count)
@@ -19,7 +19,7 @@ for col in df.columns:
 
         df[col] = df[col].fillna(user_value)
 
-df.to_excel("cleaned_customer_dataset.xlsx", index=False)
+df.to_excel("cleaned_customer_dataset.csv", index=False)
 
 print("\nMissing values filled manually!")
 print("Remaining missing values:", df.isnull().sum().sum())
